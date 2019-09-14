@@ -117,7 +117,7 @@ public class OmapiImpl implements Omapi, SEService.CallBack
 					log("Reader: " + reader.getName() + " - SE present? " + reader.isSecureElementPresent());
 					if (reader.isSecureElementPresent())
 					{
-						final Session session = readers[0].openSession();
+						final Session session = reader.openSession();
 
 						log("ATR: " + toHex(session.getATR()));
 						log("Create logical channel to D2760000930101 within the session...");
